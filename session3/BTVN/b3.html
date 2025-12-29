@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu mẫu đăng ký</title>
+</head>
+<body>
+    <h1>Đăng ký thông tin</h1>
+    
+    <form action="" method="post">
+        <div>
+            <label for="hoten">Họ và tên:</label>
+            <input type="text" name="hoten" id="hoten">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="ngaysinh">Ngày sinh:</label>
+            <input type="date" name="ngaysinh" id="ngaysinh">
+        </div>
+
+        <div>
+            Giới tính:
+            <input type="radio" name="gender" id="nam" value="nam">
+            <label for="nam">Nam</label>
+
+            <input type="radio" name="gender" id="nu" value="nu">
+            <label for="nu">Nữ</label>
+        </div>
+
+        <div>
+            <label for="sdt">Số điện thoại:</label>
+            <input type="tel" name="sdt" id="sdt">
+        </div>
+
+        <div>
+            <label for="chuyennganh">Chuyên ngành:</label>
+            <input type="text" name="chuyennganh" id="chuyennganh">
+        </div>
+
+        <div>
+            <label for="namhoc">Năm nhập học:</label>
+            <input type="number" name="namhoc" id="namhoc">
+        </div>
+
+        <div>
+            <label for="gpa">Điểm GPA:</label>
+            <input type="text" name="gpa" id="gpa">
+        </div>
+
+        <div>
+            <label for="diachi">Địa chỉ:</label>
+            <br> <textarea name="diachi" id="diachi" cols="30" rows="3"></textarea>
+        </div>
+
+        <div>
+            <label for="lophoc">Lớp học:</label>
+            <select name="lophoc" id="lophoc">
+                <option value="lop1">Lớp 1</option>
+                <option value="lop2">Lớp 2</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="ngaydangky">Ngày đăng ký học:</label>
+            <input type="date" name="ngaydangky" id="ngaydangky">
+        </div>
+
+        <div>
+            <button type="submit">Gửi thông tin</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khai báo thông tin cá nhân</title>
+</head>
+<body>
+    <h1>Tờ khai thông tin cá nhân</h1>
+
+    <form action="" method="post">
+        
+        <div>
+            <label for="hoten">Họ và tên:</label>
+            <input type="text" name="hoten" id="hoten">
+        </div>
+
+        <div>
+            <label for="ngaysinh">Ngày sinh:</label>
+            <input type="date" name="ngaysinh" id="ngaysinh">
+        </div>
+
+        <div>
+            Giới tính:
+            <input type="radio" name="gioitinh" id="nam" value="nam">
+            <label for="nam">Nam</label>
+
+            <input type="radio" name="gioitinh" id="nu" value="nu">
+            <label for="nu">Nữ</label>
+        </div>
+
+        <div>
+            <label for="cccd">Số căn cước công dân:</label>
+            <input type="text" name="cccd" id="cccd">
+        </div>
+
+        <div>
+            <label for="ngaycap">Ngày cấp:</label>
+            <input type="date" name="ngaycap" id="ngaycap">
+        </div>
+
+        <div>
+            <label for="noicap">Nơi cấp:</label>
+            <input type="text" name="noicap" id="noicap">
+        </div>
+
+        <div>
+            <label for="sdt">Số điện thoại:</label>
+            <input type="tel" name="sdt" id="sdt">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="thuongtru">Địa chỉ thường trú:</label><br>
+            <textarea name="thuongtru" id="thuongtru" cols="30" rows="3"></textarea>
+        </div>
+
+        <div>
+            <label for="tamtru">Địa chỉ tạm trú:</label><br>
+            <textarea name="tamtru" id="tamtru" cols="30" rows="3"></textarea>
+        </div>
+
+        <div>
+            <label>Loại căn cước công dân:</label>
+            <input type="radio" name="loaicc" id="cc_moi" value="moi">
+            <label for="cc_moi">Căn cước công dân mới</label>
+
+            <input type="radio" name="loaicc" id="cc_cu" value="cu">
+            <label for="cc_cu">Căn cước công dân cũ</label>
+        </div>
+
+        <div>
+            <label for="dantoc">Dân tộc:</label>
+            <input type="text" name="dantoc" id="dantoc">
+        </div>
+
+        <div>
+            <label for="tongiao">Tôn giáo:</label>
+            <input type="text" name="tongiao" id="tongiao">
+        </div>
+
+        <div>
+            <label for="quoctich">Quốc tịch:</label>
+            <input type="text" name="quoctich" id="quoctich" value="Việt Nam">
+        </div>
+
+        <div>
+            <label for="hoten_phuhuynh">Họ tên cha/mẹ:</label>
+            <input type="text" name="hoten_phuhuynh" id="hoten_phuhuynh">
+        </div>
+
+        <div>
+            <label for="cccd_phuhuynh">Số CMND/CCCD của cha/mẹ:</label>
+            <input type="text" name="cccd_phuhuynh" id="cccd_phuhuynh">
+        </div>
+
+        <div>
+            <label for="tinhthanh">Tỉnh/Thành phố:</label>
+            <select name="tinhthanh" id="tinhthanh">
+                <option value="">Chọn Tỉnh/Thành phố</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="hcm">TP. Hồ Chí Minh</option>
+                <option value="danang">Đà Nẵng</option>
+            </select>
+        </div>
+
+        <div>
+            <button type="submit">Gửi thông tin</button>
+        </div>
+
+    </form>
+</body>
+</html>

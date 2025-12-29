@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành viên nhóm</title>
+</head>
+<body>
+    <h1>Đăng ký thành viên</h1>
+
+    <form action="" method="post">
+
+        <div>
+            <label for="hoten">Họ và tên:</label>
+            <input type="text" name="hoten" id="hoten">
+        </div>
+
+        <div>
+            <label for="ngaysinh">Ngày sinh:</label>
+            <input type="date" name="ngaysinh" id="ngaysinh">
+        </div>
+
+        <div>
+            <label>Giới tính:</label>
+            <input type="radio" name="gioitinh" id="nam" value="nam">
+            <label for="nam">Nam</label>
+
+            <input type="radio" name="gioitinh" id="nu" value="nu">
+            <label for="nu">Nữ</label>
+        </div>
+
+        <div>
+            <label for="sdt">Số điện thoại:</label>
+            <input type="tel" name="sdt" id="sdt">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="diachi">Địa chỉ:</label>
+            <br>
+            <textarea name="diachi" id="diachi" cols="40" rows="3"></textarea>
+        </div>
+
+        <div>
+            <label for="vaitro">Vai trò trong nhóm:</label>
+            <select name="vaitro" id="vaitro">
+                <option value="thanhvien">Thành viên</option>
+                <option value="truongnhom">Trưởng nhóm</option>
+                <option value="thuky">Thư ký</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="sothich">Sở thích:</label>
+            <input type="text" name="sothich" id="sothich">
+        </div>
+
+        <div>
+            <label for="kynang">Kỹ năng:</label>
+            <br>
+            <textarea name="kynang" id="kynang" cols="40" rows="3"></textarea>
+        </div>
+
+        <div>
+            <label>Thời gian rảnh:</label>
+            <input type="checkbox" name="thoigian" id="sang" value="sang">
+            <label for="sang">Sáng</label>
+
+            <input type="checkbox" name="thoigian" id="chieu" value="chieu">
+            <label for="chieu">Chiều</label>
+
+            <input type="checkbox" name="thoigian" id="toi" value="toi">
+            <label for="toi">Tối</label>
+        </div>
+
+        <div>
+            <label for="lydo">Lý do tham gia nhóm:</label>
+            <br>
+            <textarea name="lydo" id="lydo" cols="40" rows="3"></textarea>
+        </div>
+
+        <div>
+            <label for="mauyeuthich">Màu yêu thích:</label>
+            <input type="color" name="mauyeuthich" id="mauyeuthich">
+        </div>
+
+        <div>
+            <label for="bantin">Đăng ký nhận bản tin:</label>
+            <input type="checkbox" name="bantin" id="bantin">
+            <label for="bantin">Có</label>
+        </div>
+
+        <div>
+            <label>Nhận thông báo qua email:</label>
+            <input type="radio" name="thongbao" id="tb_email" value="email">
+            <label for="tb_email">Email</label>
+
+            <input type="radio" name="thongbao" id="tb_sms" value="sms">
+            <label for="tb_sms">SMS</label>
+        </div>
+
+        <div>
+            <button type="submit">Đăng ký thành viên</button>
+        </div>
+
+    </form>
+</body>
+</html>

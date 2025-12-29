@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://www.myserver.com" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input required id="username" name="username" type="text" placeholder="your username" minlength="3" maxlength="20">
+        </div>
+
+        <div>
+            <label for="age">Age:</label>
+            <input id="age" name="age" type="text" placeholder="your age">
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input required id="email" name="email" type="email" placeholder="your email">
+        </div>
+
+        <div>
+            <label for="color">Favorite color:</label>
+            <input id="color" name="color" type="color" placeholder="your favorite color">
+        </div>
+
+        <div>
+            <label for="dob">Date of birth:</label>
+            <input id="dob" name="dob" type="date" placeholder="your date of birth">
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input required id="password" name="password" type="password" placeholder="your password" minlength="8" maxlength="100">
+        </div>
+
+        <div>
+            <label for="desc">Desc</label>
+            <textarea placeholder="Desc" name="desc" id="desc"></textarea>
+        </div>
+
+        <div>
+            Gender:
+        </div>
+
+        <div>
+            <label>Female</label>
+            <input type="radio" value="fe" name="gender">
+        </div>
+
+        <div>
+            <label>Male</label>
+            <input type="radio" value="ma" name="gender">
+        </div>
+
+        <div>
+            <label for="phongisgay"><abbr title="Xác minh bạn không phải là bot"><strong>Phong có gay không:</strong></abbr></label>
+            <input id="phongisgay" name="phongisgay" type="checkbox" value="true" checked>
+        </div>
+
+        <div>
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option selected value="1">Việt Nam</option>
+                <option value="2">Japan</option>
+                <option disabled value="3">USA</option>
+            </select>
+        </div>
+
+        <input type="reset">
+        <button>Send</button>
+    </form>
+</body>
+</html>
