@@ -1,0 +1,43 @@
+header {
+    background-color: deepskyblue;   
+    color: aliceblue;
+}
+h1 {
+    text-align: center;
+}
+
+#p_title {
+    text-align: center;
+    font-style: italic;
+}
+
+h2 {
+    color: dodgerblue;
+}
+
+.high_light {
+    color: rgba(0, 191, 255, 0.849);
+}
+
+footer {
+    background-color: deepskyblue;  
+    color: aliceblue;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.warning {
+    color: red;
+    font-style: italic;
+}
+
+li:hover {
+    color: dodgerblue;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
