@@ -1,0 +1,59 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.title {
+    color: #1e90ff;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.textColor {
+    color: #1e90ff;
+}
+
+.bannerHeader {
+    background-color: #f4f4fa;
+    text-align: center;
+    padding: 40px;
+}
+
+.bannerImg {
+    width: 600px;
+    height: 350px;
+    margin-top: 20px;
+}
+
+.facilitiesContainer {
+    text-align: center;
+    padding: 40px;
+}
+
+.italicText {
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.boldText {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.underlineText {
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.redText {
+    color: red;
+    margin: 10px 0;
+}
+
+.noMargin {
+    margin: 0px;
+}
