@@ -1,0 +1,51 @@
+* {
+    font-family: cursive;
+}
+
+body {
+    background-color: #fff7ed;
+}
+
+h1 {
+    background-color: #fde68a;
+    color: #78350F;
+    text-align: center;
+    
+}
+
+.navigate {
+    text-align: center;
+    background-color: #FED7AA;
+}
+
+a {
+    color: #7C2D12;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color: #7C2D12;
+}
+
+.content {
+    background-color: white;
+}
+
+.content h2 {
+    color: #78350F;
+}
+
+.content p {
+    color: #431407;
+}
+
+footer {
+    background-color: #78350F;
+    color: white;
+    text-align: center;
+}
+
+.img {
+    text-align: center;
+}
