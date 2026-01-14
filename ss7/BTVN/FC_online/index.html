@@ -4,92 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Câu lạc bộ đá bóng hampions FC</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        header {
-            text-align: center;
-            background-image: url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200");
-            background-size: 100%;
-            background-position-y: -230px;
-        }
-
-        .title {
-            margin-top: 70px;
-            margin-bottom: 20px;
-            height: 70px;
-        }
-
-        .title:hover {
-            color: blue;
-        }
-
-        .slogan {
-            position: relative;
-            bottom: 15px;
-        }
-
-        header .navigate {
-            background-color: #19472A;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            height: 70px;
-        }
-
-        header .navigate .navLinkCover {
-            margin-top: 15px;
-        }
-
-        header .navigate .navLinkCover .navLink {
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: all 0.5s;
-            display: inline-block;
-            width: 90px;
-            height: 40px;
-            line-height: 40px;
-        }
-
-        header .navigate .navLinkCover .navLink:hover {
-            background-color: #3d7150;
-            text-decoration: underline;
-        }
-
-        .spacing {
-            opacity: 0;
-        }
-        main .greating {
-            text-align: center;
-        }
-        main .greating .img_background {
-            width: 900px;
-            height: 750px;
-            margin: 30px;
-            border-radius: 10px;
-        }
-
-        main .greating .action_img {
-            position: absolute;
-            border-radius: 10px;
-            width: 400px;
-            right: 40%;
-            top: 250px;
-        }
-
-        main .greating .welcome_text {
-            position: absolute;
-            right: 40%;
-            top: 250px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -97,21 +12,204 @@
         <p class="slogan">Đam mê - Đoàn kết - Chiến thắng</p>
         <nav class="navigate">
             <div class="navLinkCover">
-                <a href="youtube.com" class="navLink">Giới thiệu</a> <span class="spacing">--</span>
-                <a href="youtube.com" class="navLink">Đội hình</a> <span class="spacing">--</span>
-                <a href="youtube.com" class="navLink">Lịch thi đấu</a> <span class="spacing">--</span>
-                <a href="youtube.com" class="navLink">Thành tích</a> <span class="spacing">--</span>
-                <a href="youtube.com" class="navLink">Đăng kí</a>
+                <a href="#greating" class="navLink">Giới thiệu</a> <span class="spacing">--</span>
+                <a href="#soccers" class="navLink">Đội hình</a> <span class="spacing">--</span>
+                <a href="#date" class="navLink">Lịch thi đấu</a> <span class="spacing">--</span>
+                <a href="#achievements" class="navLink">Thành tích</a> <span class="spacing">--</span>
+                <a href="#register" class="navLink">Đăng kí</a>
             </div>
         </nav>
     </header>
     <main>
-        <section class="greating">
+        <section class="greating" id="greating">
             <img class="img_background" src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=1200" alt="img">
             <img class="action_img" src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600" alt="img">
             <p class="welcome_text">Chào mừng đến với champions FC!</p>
             <p class="forWho_text">Câu lạc bộ đá bóng hàng đầu dành cho sinh viên và người đam mê bóng đá</p>
         </section>
+
+        <section class="info">
+            <div class="cover">
+                <h2 class="section_title">Giới thiệu về câu lạc bộ</h2>
+                <p class="section_content">Champions FC được thành lập từ năm 2018, là nơi quy tụ những tài năng trẻ đam mê bóng đá. Chúng tôi không chỉ tập luyện mà còn xây dựng tinh thần đồng đội, kỷ luật và lối sống lành mạnh cho các thành viên.</p>
+                <p class="section_content">Với đội ngũ huấn luyện viên giàu kinh nghiệm và cơ sở vâht chất hiện đại, Champions FC cam kết mang đến môi trường tập luyện chuyên nghiệp nhất cho các cầu thủ.</p>
+                <p class="section_content note"><span class="bold">Lưu ý quan trọng:</span> Câu lạc bộ tập luyện vào thứ 3, 5, 7 hàng tuần. Thành viên cần đăng kí trước để được bố trí lịch tập phù hợp!</p>
+            </div>
+        </section>
+
+        <section class="soccers" id="soccers">
+            <div class="cover">
+                <h2 class="section_title">Đội hình chính mùa giải 2025</h2>
+                <table class="soccers_table">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ tên</th>
+                            <th>Vị trí</th>
+                            <th>Số áo</th>
+                            <th>Thành tích</th>
+                        </tr>
+                    </thead>
+                    <tbody class="section_content">
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Văn An</td>
+                            <td>Thủ môn</td>
+                            <td>1</td>
+                            <td>50 trận giữ sạch lới</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nguyễn Văn An</td>
+                            <td>Thủ môn</td>
+                            <td>1</td>
+                            <td>50 trận giữ sạch lới</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Nguyễn Văn An</td>
+                            <td>Thủ môn</td>
+                            <td>1</td>
+                            <td>50 trận giữ sạch lới</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Nguyễn Văn An</td>
+                            <td>Thủ môn</td>
+                            <td>1</td>
+                            <td>50 trận giữ sạch lới</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Nguyễn Văn An</td>
+                            <td>Thủ môn</td>
+                            <td>1</td>
+                            <td>50 trận giữ sạch lới</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Nguyễn Văn An</td>
+                            <td>Thủ môn</td>
+                            <td>1</td>
+                            <td>50 trận giữ sạch lới</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="date" id="date">
+            <div class="cover">
+                <h2 class="section_title">Lịch đấu & lịch tập</h2>
+                <p class="miniSection_title">Lịch tập luyện hàng tuần</p>
+                <ul>
+                    <li class="section_content section_list"><span class="bold">Thứ 3:</span>17:00 - 19:00 - Luyện kỹ thuật cá nhân & thể lực</li>
+                    <li class="section_content section_list"><span class="bold">Thứ 4:</span></li>
+                    <li class="section_content section_list"><span class="bold">Thứ 7:</span></li>
+                    <li class="section_content section_list"><span class="bold">Chủ nhật: (Tuỳ lịch) - Thi đấu giải đấu chính thức</span></li>
+                </ul>
+                <p class="miniSection_title">Các trận đấu sắp tới</p>
+                <ul>
+                    <li class="section_content section_list">20/1/2026 - Champions FC vs Dragon FC -  Vòng 1.5 kết</li>
+                    <li class="section_content section_list">20/1/2026 - Champions C vs lilbri FC -  Vòng 1.5 kết</li>
+                    <li class="section_content section_list">20/1/2026 - Champions F vs mewo FC -  Vòng 1.5 kết</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="achievements" id="achievements">
+            <div class="cover">
+                <h2 class="section_title">Thành tích câu lạc bộ</h2>
+                <table class="achev_table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Năm</th>
+                            <th colspan="2">Thông tin giải đấu</th>
+                            <th rowspan="2">Ghi chú</th>
+                        </tr>
+                        <tr>
+                            <th>Tên giải</th>
+                            <th>Thành tích</th>
+                        </tr>
+                    </thead>
+                    <tbody class="section_content">
+                        <tr>
+                            <td rowspan="2">2024</td>
+                            <td>Giải bóng Đá sinh viên toàn quốc</td>
+                            <td>Vô địch</td>
+                            <td>Bất bại cả mùa</td>
+                        </tr>
+                        <tr>
+                            <td>Cúp mùa hè</td>
+                            <td>Á quân</td>
+                            <td>Thua ở loạt sút penalty</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2">2023</td>
+                            <td>Giải bóng Đá sinh viên toàn quốc</td>
+                            <td>Vô địch</td>
+                            <td>Bất bại cả mùa</td>
+                        </tr>
+                        <tr>
+                            <td>Cúp mùa hè</td>
+                            <td>Á quân</td>
+                            <td>Thua ở loạt sút penalty</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="finalArchev">
+                            <td colspan="4">Tổng cộng: 2 vô địch | 1 Á quân | 1 Top 4</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <p class="section_content note"><span class="bold">rowspan:</span> Gộp hàng dọc <br>
+                <span class="bold">colspan:</span> Gộp hàng ngang </p>
+            </div>
+        </section>
+
+        <section class="register" id="register">
+            <div class="cover">
+                <h2 class="section_title">Đăng kí thành viên mới</h2>
+                <p class="section_content">hãy điền thông tin bên dưới để trở thành thành viên chính thức của Champions FC. Chúng tôi sẽ liên hệ với bạn trong vòng 48 giờ!</p>
+                <form class="form_register" action="youtube.com" method="post">
+                    <div class="text_email">
+                        <label for="username">Họ và tên</label>
+                        <input type="text" placeholder="Nguyễn Văn A" name="username" id="username">
+                        <input type="email" placeholder="Email: example@email.com" name="email">
+                    </div>
+                    <div class="select">
+                        <label for="position">Vị trí bạn muốn chơi</label>
+                        <select name="position" id="position">
+                            <option value="0" selected>-- Chọn vị trí --</option>
+                            <option value="1">Thủ môn</option>
+                            <option value="2">Hậu vệ</option>
+                        </select>
+                    </div>
+                    <div class="checkBox">
+                        <label for="checkboxDefault">Lịch tập bạn có thể tham gia</label>
+                        <input type="checkbox" value="3" id="checkboxDefault"><span>Thứ 3</span>
+                        <input type="checkbox" value="5"><span>Thứ 5</span>
+                        <input type="checkbox" value="7"><span>Thứ 7</span>
+                        <input type="checkbox" value="8"><span>Cn</span>
+                    </div>
+                    <div class="textarea">
+                        <label for="soccer_info">Lời nhắn/Giới thiệu bản thân:</label>
+                        <textarea rows="5" name="soccer_info" id="soccer_info" placeholder="Chia sẻ về đam mê bóng đá và mục tiêu của bạn..."></textarea>
+                    </div>
+                    <button class="send" type="submit">Gửi đăng ký</button>
+                </form>
+            </div>
+        </section>
     </main>
+    <footer>
+        <section class="end">
+            <p class="copyright">© 2026 - Champions FC - Câu lạc bộ đá bóng</p>
+            <p>Liên hệ: <span class="contact">hehe@gmail.com</span> | Hotline: 0123-456-789</p>
+            <p class="nav"><a href="facebook.com">Facebook</a> | <a href="ins.com">Instagram</a> | <a href="you.com">YouTube</a></p>
+        </section>
+    </footer>
 </body>
 </html>

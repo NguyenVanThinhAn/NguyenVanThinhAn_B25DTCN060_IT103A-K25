@@ -1,0 +1,340 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #BEF6B7;
+}
+
+header {
+    text-align: center;
+    background-image: url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200");
+    background-size: 100%;
+    background-position-y: -230px;
+}
+
+.title {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    height: 70px;
+}
+
+.title:hover {
+    color: blue;
+}
+
+.slogan {
+    position: relative;
+    bottom: 15px;
+}
+
+header .navigate {
+    background-color: #19472A;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    z-index: 1;
+}
+
+header .navigate .navLinkCover {
+    margin-top: 15px;
+}
+
+header .navigate .navLinkCover .navLink {
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.5s;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+}
+
+header .navigate .navLinkCover .navLink:hover {
+    background-color: #3d7150;
+    text-decoration: underline;
+}
+
+.spacing {
+    opacity: 0;
+}
+main .greating {
+    text-align: center;
+}
+main .greating .img_background {
+    width: 900px;
+    height: 750px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+main .greating .action_img {
+    position: absolute;
+    border-radius: 10px;
+    width: 400px;
+    right: 40%;
+    top: 250px;
+    transition: all 1s;
+    
+}
+
+main .greating .action_img:hover {
+    transform: scale(1.1);
+}
+
+main .greating .welcome_text {
+    position: relative;
+    top: -150px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+main .greating .forWho_text {
+    position: relative;
+    top: -130px;
+    color: white;
+    font-size: 15px;
+}
+
+/* INFO */
+
+main .info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info .cover {
+    background-color: white;
+    width: 1200px;
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cover .section_title {
+    color: #19472A;
+    margin-bottom: 10px;
+}
+
+.cover .section_content {
+    margin-bottom: 10px;
+    color: #668E47;
+}
+
+.cover .note {
+    background-color: #FFF3CD;
+    padding: 15px;
+    border-left: solid 5px #FFC106;
+    border-radius: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* SOCCERS */
+
+main .soccers {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.soccers .cover {
+    background-color: white;
+    width: 1200px;
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cover .soccers_table {
+    border-spacing: 0px;
+    width: 100%;
+}
+
+.cover .soccers_table th {
+    color: white;
+    padding: 10px;
+    background-color: #19472A;
+}
+
+.cover .soccers_table td {
+    padding: 15px;
+    border-bottom:1px rgb(209, 207, 207) solid;
+}
+
+.cover .soccers_table tr:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+/* DATE */
+
+main .date {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.date .cover {
+    background-color: white;
+    width: 1200px;
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cover .miniSection_title {
+    color: #2E8659;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.cover .section_list {
+    padding: 7px;
+    border-bottom: dotted;
+    border-width: 1px;
+    border-color: rgb(209, 207, 207);
+}
+
+/* ARCHEV */
+
+main .achievements {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.achievements .cover {
+    background-color: white;
+    width: 1200px;
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cover .achev_table {
+    border-spacing: 0;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cover .achev_table th {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #19472A;
+    color: white;
+}
+
+.cover .achev_table td {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.cover .achev_table .finalArchev {
+    background-color: #F0F0F0;
+    color: #668E47;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* register */
+
+main .register {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.register .cover {
+    background-color: white;
+    width: 1200px;
+    display: inline-block;
+    text-align: left;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cover .form_register {
+    background-color: #A1B2FF;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.cover .form_register input,
+.cover .form_register select,
+.cover .form_register textarea {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    padding: 10px;
+}
+
+.cover .form_register textarea {
+    height: 100px;
+}
+
+.cover .form_register input[type="checkbox"] {
+    display: inline;
+    height: 3%;
+    width: 3%;
+}
+
+.cover .form_register .checkBox span {
+    color: white;
+}
+
+.cover .form_register label {
+    display: block;
+    color: white;
+}
+
+.cover .form_register .send {
+    color: white;
+    background-color: #19472A;
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+/* END */
+
+.end {
+    text-align: center;
+    background-color: #19472A;
+    color: white;
+}
+
+.end p {
+    padding: 10px;
+    margin: 10px;
+}
+
+.end .nav a {
+    color: #89E68B;
+    text-decoration: none;
+}
+
+.end .contact {
+    color: #8DEA8E;
+}
