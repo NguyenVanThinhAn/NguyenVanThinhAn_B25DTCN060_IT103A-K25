@@ -1,0 +1,39 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #231651;
+    text-transform: capitalize;
+}
+
+.checked_icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-image: url(./asset/icon-check.png);
+    vertical-align: middle;
+}
+
+p {
+    color: #231651;
+}
+
+#advise_button {
+    background-color: #bc222a;
+    border: none;
+    color: whitesmoke;
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+}
+
+#check_fit {
+   background-color: #eaeaea;
+    border-width: 1px;
+    border-color: #eaeaeaba;
+    color: #231651;
+    border-radius: 5px;
+    height: 50px;
+    width: 150px; 
+}

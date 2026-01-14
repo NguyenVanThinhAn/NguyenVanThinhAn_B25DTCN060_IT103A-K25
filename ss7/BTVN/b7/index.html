@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="cover_UI">
+            <header>
+                <h1>Biểu mẫu feedback phòng khám nha khoa</h1>
+            </header>
+            <main>
+                <form action="youtube.con" method="post" class="feedback_form">
+                    <div>
+                        <label for="username">Họ và tên</label>
+                        <br/>
+                        <input type="text" name="username" id="username" placeholder="Nhập họ và tên">
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <br/>
+                        <input type="text" name="email" id="email" placeholder="example@gmail.com">
+                    </div>
+
+                    <div>
+                        <label for="service">Dịch vụ đã sử dụng</label>
+                        <br/>
+                        <select name="service" id="service">
+                            <option selected value="1">Khám răng tổng quát</option>
+                            <option value="2">opt2</option>
+                            <option value="3">opt3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="rate">Mức dộ hài lòng</label>
+                        <br/>
+                        <select name="rate" id="rate">
+                            <option selected value="1">Rất hài lòng</option>
+                            <option value="2">opt2</option>
+                            <option value="3">opt3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="feel">Email</label>
+                        <br/>
+                        <textarea name="feel" id="feel" placeholder="Hãy cho chúng tôi biết cảm nhận của bạn..."></textarea>
+                    </div>
+                    
+                    <button type="submit">Gửi Feedback</button>
+                </form>
+            </main>
+        </div>
+    </section>
+</body>
+</html>

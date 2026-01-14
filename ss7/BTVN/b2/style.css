@@ -1,0 +1,16 @@
+section {
+    display: inline-block;
+    border-style: solid;
+    border-color: rgb(61, 255, 47);
+    border-radius: 10px;
+    width: 400px;
+}
+
+header {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: large;
+}

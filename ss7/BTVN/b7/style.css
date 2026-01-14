@@ -1,0 +1,55 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(138, 138, 138);
+}
+
+section {
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.cover_UI {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 25px;
+    text-align: center;
+    color: #0f766e;
+}
+
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+form div {
+    margin-top: 20px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    color: #124e4a;
+    font-weight: bold;
+}
+
+button {
+    background-color: #10a5a4;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: white;
+}

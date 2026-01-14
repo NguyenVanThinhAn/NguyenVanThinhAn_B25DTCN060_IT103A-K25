@@ -1,0 +1,74 @@
+* {
+    font-family: "Itim",Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgba(206, 206, 206, 0.828);
+}
+
+section {
+    display: inline-block;
+    width: 300px;
+}
+
+header {
+    background-color: aqua;
+    height: 80px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.title {
+    line-height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.hot {
+    display: inline-block;
+    position: absolute;
+    background-color: red;
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+    left: 265px;
+}
+
+main {
+    background-color: white;
+}
+
+div {
+    padding: 30px;
+}
+
+hr {
+    border-color: #555555;
+    opacity: 0.1;
+}
+
+.service {
+    color: #555555;
+}
+
+.service span{
+    color: rgb(0, 185, 0);
+}
+
+footer {
+    background-color: white;
+    height: 50px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+button {
+    border-radius: 20px;
+    border: none;
+    background-color: #02d9ff;
+    height: 40px;
+    width: 250px;
+    font-weight: bold;
+}

@@ -1,0 +1,38 @@
+.star_icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-image: url(./asset/starimg.png);
+    background-size: contain;
+}
+
+section {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+}
+
+h1 {
+    color: #ff6701;
+    text-transform: uppercase;
+}
+
+.avatar {
+    width: 600px;
+    height: 400px;
+}
+
+.name {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.job {
+    font-size: 30px;
+    color: rgb(0, 255, 0);
+}
+
+.desc {
+    color: #555555;
+    font-size: 25px;
+}
