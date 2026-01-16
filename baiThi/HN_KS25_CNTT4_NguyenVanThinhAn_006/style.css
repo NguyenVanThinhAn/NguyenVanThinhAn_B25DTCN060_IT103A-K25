@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #EEF2F3;
+    text-align: center;
+}
+
+header {
+    background-color: #2E8B57;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+header h1 {
+    color: white;
+    margin: 20px;
+    display: inline-block;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    margin: 15px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main .banner {
+    margin-top: 120px;
+    background-image: url(./img/banner.jpg);
+    text-align: center;
+    color: white;
+}
+
+main .banner .banner_text {
+    background-color: rgba(0, 0, 0,0.6);
+    display: inline-block;
+    margin: 30px;
+}
+
+main .banner .banner_text h2,
+main .banner .banner_text p {
+    padding: 10px;
+}
+
+/* gioithieu */
+
+main .intro {
+    background-color: white;
+    display: inline-block;
+    padding: 30px;
+    width: 80%;
+    margin: 20px;
+    text-align: left;
+}
+
+main .intro h2 {
+    color: #2E8B57;
+    margin-bottom: 10px;
+}
+
+/* tour noi bat */
+
+main .spotlight_tour {
+    margin: 20px;
+    background-color: white;
+    display: inline-block;
+    padding: 30px;
+    width: 80%;
+}
+
+main .spotlight_tour h2 {
+    color: #2E8B57;
+    text-align: left;
+}
+
+main .spotlight_tour .tour_preview div {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+main .spotlight_tour .tour_preview div .tour_name {
+    margin-top: 100px;
+    padding-bottom: 5px;
+    background-color: white;
+}
+
+main .spotlight_tour .tour_preview div .tour_time {
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+main .spotlight_tour .tour_preview .tour_rung_nguye_sinh {
+    background-image: url(./img/first\ tour.jpg);
+    background-size: contain;
+}
+
+main .spotlight_tour .tour_preview .tour_suoi_thac_nuoc {
+    background-image: url(./img/second\ tour.jpg);
+    background-size: contain;
+}
+
+main .spotlight_tour .tour_preview .tour_cam_trai_sinh_thai {
+    background-image: url(./img/third\ tour.jpg);
+    background-size: contain;
+}
+
+main .spotlight_tour .tour_preview .tour_vuon_trai_cay {
+    background-image: url(./img/forth\ tour.jpg);
+    background-size: contain;
+}
+
+/* price */
+
+main .price {
+    background-color: white;
+    display: inline-block;
+    padding: 30px;
+    width: 80%;
+    margin: 20px;
+}
+
+main .price h2 {
+    color: #2E8B57;
+    text-align: left;
+}
+
+main .price table {
+    border-spacing: 0px;
+    width: 100%;
+    text-align: left;
+}
+
+main .price table th {
+    background-color: #DEF0E9;
+    text-align: center;
+    padding: 7px;
+    border: black solid 1px;
+}
+
+main .price table td {
+    text-align: center;
+    padding: 7px;
+    border: black solid 1px;
+}
+
+/* register */
+
+main .register {
+    background-color: white;
+    display: inline-block;
+    padding: 30px;
+    width: 80%;
+    margin: 20px;
+}
+
+main .register h2 {
+    color: #2E8B57;
+    text-align: left;
+}
+
+main .register form input {
+    display: block;
+    width: 100%;
+    margin: 10px;
+    height: 40px;
+}
+
+main .register form button {
+    display: block;
+    width: 100%;
+    margin: 10px;
+    height: 40px;
+    color: white;
+    background-color: #2E8B57;
+    border: none;
+}
+
+/* footer */
+
+footer {
+    background-color: #2E8B57;
+    display: inline-block;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    padding: 20px;
+}
