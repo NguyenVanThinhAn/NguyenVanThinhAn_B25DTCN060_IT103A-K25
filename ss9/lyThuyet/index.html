@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content {
+            display: flex;
+            /* flex-direction: column-reverse; */
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: -10px;
+            gap: 20px;
+        }
+
+        .item_1 {
+            flex-grow: 2;
+        }
+
+        .item_3 {
+            flex-grow: 1;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <main id="content">
+        <div class="item_1" style="height: 100px; background-color: red;">con 1</div>
+        <div class="item_2" style="height: 100px; background-color: blue;">con 2</div>
+        <div class="item_3" style="height: 100px; background-color: green;">con 3</div>
+    </main>
+</body>
+</html>
