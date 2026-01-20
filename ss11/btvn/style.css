@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF8F0;
+}
+
+header .head_bar {
+    background-color: white;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header .head_bar .icon {
+    color: #E76F51;
+    font-size: 30px;
+}
+
+header .head_bar nav a {
+    color: #615757;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header .head_bar button {
+    background-color: #E76F51;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+/* banner */
+
+header .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 30px;
+    color: white;
+}
+
+header .banner button {
+    background-color: #E76F51;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 15px;
+}
+
+/* body */
+
+main .spot_light_foods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+main .spot_light_foods h2 {
+    color: #E76F51;
+    font-size: 45px;
+    padding: 10px;
+}
+
+main .spot_light_foods .preview {
+    display: flex;
+    gap: 30px;
+}
+
+main .spot_light_foods .preview .food {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #3E3131;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+main .spot_light_foods .preview .food img {
+    width: 320px;
+    height: 220px;
+}
+
+main .spot_light_foods .preview .food p {
+    width: 320px;
+}
+
+main .spot_light_foods .preview .food .price {
+    color: #E76F51;
+}
+
+/* menu */
+
+main .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+main .menu h2 {
+    color: #E76F51;
+    font-size: 45px;
+    padding: 10px;
+}
+
+main .menu .tags {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+main .menu .tags p {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .menu .tags span {
+    color: #E76F51;
+}
+
+footer {
+    margin-top: 80px;
+    background-color: #3C2F2F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+footer .contact {
+    display: flex;
+    gap: 80px;
+    border-bottom: solid 1px;
+}
+
+footer .contact .contact_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .contact .contact_text h3 {
+    color: #E76F51;
+}
