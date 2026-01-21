@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+            background-color: white;
+            align-items: center;
+        }
+
+        header .logo {
+            color: brown;
+            font-size: 30px;
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 10px;
+        }
+
+        header nav button {
+            background-color: brown;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        header nav button:hover {
+            cursor: pointer;
+        }
+
+        /* logo_detail */
+
+        header .logo_detail {
+            display: none;
+            color: brown;
+        }
+
+        /* Media */
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: space-between;
+            }
+
+            header .logo_detail {
+                display: contents;
+            }
+
+            header nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Edulearn</div>
+        <nav>
+            <a href="">Trang chủ</a>
+            <a href="">Tính năng</a>
+            <a href="">Khóa học</a>
+            <a href="">Đánh giá</a>
+            <a href="">Bảng giá</a>
+            <a href="">FAQ</a>
+            <button>Bắt đầu ngay</button>
+        </nav>
+        <div class="logo_detail">
+            <i class="fa-solid fa-align-justify"></i>
+        </div>
+    </header>
+</body>
+</html>

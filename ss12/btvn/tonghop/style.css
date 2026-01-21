@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #F4F7FC;
+}
+
+/* GLOBAL */
+.fa-solid {
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+
+/* Header */
+
+header {
+    background-color: #0E64E6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+header .logo {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+header .findbar{
+    border: none;
+    background-color: #4785F0;
+    border-radius: 50px;
+    padding: 10px 10%;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+/* Body */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+main .welcome {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+}
+
+/* study process */
+
+main .studying {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .studying h2 {
+    color:#0E6EFD;
+}
+
+main .studying .course_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+main .studying .course_list .course {
+    background-color: white;
+    width: 32%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+main .studying .course_list .course:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-7px);
+}
+
+main .studying .course_list .course img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+main .studying .course_list .course .text_block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+main .studying .course_list .course .text_block .name {
+    font-weight: bold;
+}
+
+main .studying .course_list .course .text_block button {
+    background-color: #0E6EFD;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* study process */
+
+main .other_course {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .other_course h2 {
+    color:#0E6EFD;
+}
+
+main .other_course .course_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+main .other_course .course_list .course {
+    background-color: white;
+    width: 32%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+main .other_course .course_list .course:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-7px);
+}
+
+main .other_course .course_list .course img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+main .other_course .course_list .course .text_block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+main .other_course .course_list .course .text_block .name {
+    font-weight: bold;
+}
+
+main .other_course .course_list .course .text_block button {
+    background-color: #0E6EFD;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+/* MEDIA */
+
+@media (max-width: 768px) {
+    main .studying .course_list .course {
+        width: 49%;
+        justify-content: center;
+    }
+
+    main .other_course .course_list .course {
+        width: 49%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .fa-solid {
+        display: contents;
+    }
+    
+    header {
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .findbar {
+        display: none;
+    }
+
+    main .studying .course_list .course {
+        width: 100%;
+        justify-content: center;
+    }
+
+    main .other_course .course_list .course {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #E5E5E5;
+        }
+        
+        /* main */
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* card */
+        
+        main .card_list {
+            padding: 30px;
+            width: 100%;
+        }
+
+        main .card_list .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        /* Card Header */
+
+
+        main .card_list .card .card_header {
+            background: linear-gradient(90deg,#667EEA,#764AA2);
+            width: 100%;
+            height: 190px;
+            position: relative;
+        }
+
+        main .card_list .card .card_header {
+            display: flex;
+            justify-content: right;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        main .card_list .card .card_header .status {
+            padding: 10px;
+            color: white;
+            opacity: 0.6;
+        }
+
+        main .card_list .card .card_header::before {
+            content: "</>";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 60px;
+        }
+
+        /* Card body */
+
+        main .card_list .card .card_body {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* tags and rate */
+
+        main .card_list .card .card_body .tags_and_rate {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main .card_list .card .card_body .tags_and_rate .tags .tag {
+            font-weight: bold;
+            color: #7073F3;
+            background: linear-gradient(rgba(112, 115, 243, 0.3),rgba(112, 115, 243, 0.3));
+            padding: 3px 5px;
+            border-radius: 10px;
+        }
+
+        main .card_list .card .card_body .tags_and_rate .rate p {
+            font-weight: bold;
+        }
+
+        /* Textblock */
+
+        main .card_list .card .card_body .text_block {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        main .card_list .card .card_body .text_block p:nth-child(1) {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        main .card_list .card .card_body .text_block p:nth-child(2) {
+            color: #8C8F91;
+        }
+
+
+        main .card_list .card .card_body .time_and_member {
+            display: flex;
+            justify-content: space-between;
+            color: #8C8F91;
+            padding-bottom: 10px;
+            border-bottom: rgba(140, 143, 145,0.5) 1px solid;
+        }
+
+        /*　card footer */
+
+        main .card_list .card .card_footer {
+            width: 100%;
+        }
+
+        main .card_list .card .card_footer .price_and_detail {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        main .card_list .card .card_footer .price_and_detail .price {
+            color: #676BF1;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        main .card_list .card .card_footer .price_and_detail button {
+            background-color: #0E6EFD;
+            border: none;
+            padding: 5px 10px;
+            color: white;
+            border-radius: 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <main>
+        <div class="card_list">
+            <div class="card">
+                <div class="card_header">
+                    <p class="status">Bán chạy</p>
+                </div>
+
+                <div class="card_body">
+                    <div class="tags_and_rate">
+                        <div class="tags">
+                            <span class="tag">Lập trình</span>
+                        </div>
+
+                        <div class="rate">
+                            <p>⭐️4.3</p>
+                        </div>
+                    </div>
+
+                    <div class="text_block">
+                        <p>Lập trình 1</p>
+                        <p>Học lập trình web cơ bản đến nâng cao với các công nghệ hiện đại nhất</p>
+                    </div>
+
+                    <div class="time_and_member">
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>40 giờ</span>
+                        </div>
+
+                        <div class="member">
+                            <i class="fa-regular fa-user"></i>
+                            12k+ học viên
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card_footer">
+                    <div class="price_and_detail">
+                        <p class="price">2.990.000đ</p>
+                        <button class="detail">Xem chi tiết</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn Footer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #0d1117;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding: 60px 80px 40px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .brand-section {
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .logo i {
+            color: #6366f1;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #9ca3af;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #1f2937;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .column h3 {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .column ul {
+            list-style: none;
+        }
+
+        .column ul li {
+            margin-bottom: 12px;
+        }
+
+        .column ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #9ca3af;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .contact-info i {
+            width: 18px;
+        }
+
+        .divider {
+            border: 0;
+            border-top: 1px solid #374151;
+            margin-bottom: 30px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .heart {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+
+    <footer>
+        <div class="brand-section">
+            <div class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                <span>EduLearn</span>
+            </div>
+            <p class="description">
+                Nền tảng học trực tuyến hàng đầu, mang đến trải nghiệm học tập tốt nhất cho mọi người.
+            </p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="column">
+                <h3>Khóa học</h3>
+                <ul>
+                    <li><a href="#">Lập trình</a></li>
+                    <li><a href="#">Thiết kế</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Kinh doanh</a></li>
+                    <li><a href="#">Ngoại ngữ</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Đội ngũ</a></li>
+                    <li><a href="#">Sự nghiệp</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li><a href="#">Trung tâm trợ giúp</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Chính sách</a></li>
+                    <li><a href="#">Điều khoản</a></li>
+                    <li><a href="#">Bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>Liên hệ</h3>
+                <ul class="contact-info">
+                    <li><i class="fa-regular fa-envelope"></i> info@edulearn.vn</li>
+                    <li><i class="fa-solid fa-phone"></i> 1900 1234</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Hà Nội, Việt Nam</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="footer-bottom">
+            <p>© 2025 EduLearn. Tất cả quyền được bảo lưu.</p>
+            <p>Được thiết kế với <span class="heart">❤</span> bởi EduLearn Team</p>
+        </div>
+    </footer>
+
+</body>
+</html>

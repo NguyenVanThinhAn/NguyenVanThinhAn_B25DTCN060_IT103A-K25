@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f9fafb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .faq-container {
+            width: 100%;
+            max-width: 800px;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e0e7ff;
+            color: #4f46e5;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #6b7280;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #1f2937;
+            cursor: default;
+        }
+
+        .faq-content {
+            display: none;
+            padding: 0 24px 24px 24px;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .faq-item.active {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-item.active .faq-question {
+            background-color: #5b5bf1;
+            color: #ffffff;
+        }
+
+        .faq-item.active .faq-content {
+            display: block;
+            background-color: #ffffff;
+            color: #374151;
+            padding-top: 24px;
+        }
+
+        .icon {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="faq-container">
+        <div class="header">
+            <span class="badge">Câu hỏi thường gặp</span>
+            <h1 class="title">Bạn có thắc mắc?</h1>
+            <p class="subtitle">Chúng tôi sẵn sàng giải đáp mọi thắc mắc của bạn</p>
+        </div>
+
+        <div class="faq-list">
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>Tôi có thể học trên điện thoại không?</span>
+                    <i class="fa-solid fa-chevron-up icon"></i>
+                </div>
+                <div class="faq-content">
+                    Có, nền tảng của chúng tôi hoàn toàn tương thích với mọi thiết bị bao gồm điện thoại, tablet và máy tính. Bạn có thể học mọi lúc, mọi nơi.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Chứng chỉ có được công nhận không?</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Tôi có thể hoàn tiền nếu không hài lòng?</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Làm thế nào để liên hệ với giảng viên?</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Tôi có thể tải video về để xem offline không?</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

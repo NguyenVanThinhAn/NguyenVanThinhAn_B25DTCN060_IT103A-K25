@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #F8F9FA;
+        }
+
+        /* global */
+
+        .fa-circle-check {
+            color: green;
+        }
+
+        /* header */
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        header .part_name {
+            font-weight: bold;
+            color: #6366F1;
+            background-color: rgba(99, 102, 241,0.2);
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        header .title {
+            font-size: 45px;
+        }
+
+        header .desc {
+            color: rgba(0, 0, 0,0.5);
+        }
+
+        /* body */
+
+        main {
+        }
+
+        main .card_list {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            width: 100%;
+        }
+
+        main .card_list .card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 25%;
+        }
+
+        main .card_list .card .card_header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px;
+            border-bottom: solid rgba(0, 0, 0,0.2);
+        }
+
+        main .card_list .card .card_header .price_and_time .price {
+            color: #6366F1;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        main .card_list .card .card_header .price_and_time .time {
+            color: rgba(0, 0, 0,.5);
+        }
+
+        /* card body */
+
+        main .card_list .card .card_body {
+            padding: 5px;
+            width: 100%;
+        }
+
+        main .card_list .card .card_body .privilege {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* footer */
+        
+        main .card_list .card .card_footer {
+            width: 100%;
+            padding: 5px;
+        }
+
+        main .card_list .card .card_footer button {
+            width: 100%;
+            border: solid 1px #0D6EFD;
+            border-radius: 5px;
+            padding: 5px;
+            color: #0D6EFD;
+            background-color: white;
+        }
+
+        /* Custome card */
+
+        main .card_list .card:nth-child(2) {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transform: scale(1.1,1.1);
+
+            border: #6366F1 solid 2px;
+        }
+
+        main .card_list .card:nth-child(2) .card_footer button {
+            width: 100%;
+            border: solid 1px #0D6EFD;
+            border-radius: 5px;
+            padding: 5px;
+            color: white;
+            background-color: #0D6EFD;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <p class="part_name">Bảng giá</p>
+        <h1 class="title">Chọn gói phù hợp với bạn</h1>
+        <p class="desc">Linh hoạt và phù hợp với mọi nhu cầu học tập</p>
+    </header>
+    
+    <main>
+        <div class="card_list">
+            <div class="card">
+                <div class="card_header">
+                    <h2 class="pack_name">Cơ bản</h2>
+                    <div class="price_and_time">
+                        <span class="price">499.000đ</span>
+                        <span class="time">/tháng</span>
+                    </div>
+                </div>
+
+                <div class="card_body">
+                    <div class="privilege">
+                        <p><i class="fa-solid fa-circle-check"></i> Truy cập 50+ khóa học</p>
+                        <p><i class="fa-solid fa-circle-check"></i> Học trên mọi thiết bị</p>
+                        <p><i class="fa-solid fa-circle-check"></i> Hỗ trợ cộng đồng</p>
+                        <p><i class="fa-regular fa-circle-xmark"></i> Chứng chỉ</p>
+                        <p><i class="fa-regular fa-circle-xmark"></i> Hỗ trợ 1-1</p>
+                    </div>
+                </div>
+
+                <div class="card_footer">
+                    <button>Chọn gói</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_header">
+                    <h2 class="pack_name">Chuyên nghiệp</h2>
+                    <div class="price_and_time">
+                        <span class="price">999.000đ</span>
+                        <span class="time">/tháng</span>
+                    </div>
+                </div>
+
+                <div class="card_body">
+                    <div class="privilege">
+                        <p><i class="fa-solid fa-circle-check"></i> Truy cập 50+ khóa học</p>
+                        <p><i class="fa-solid fa-circle-check"></i> Học trên mọi thiết bị</p>
+                        <p><i class="fa-solid fa-circle-check"></i> Hỗ trợ cộng đồng</p>
+                        <p><i class="fa-regular fa-circle-xmark"></i> Chứng chỉ</p>
+                        <p><i class="fa-regular fa-circle-xmark"></i> Hỗ trợ 1-1</p>
+                    </div>
+                </div>
+
+                <div class="card_footer">
+                    <button>Chọn gói</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card_header">
+                    <h2 class="pack_name">Cơ bản</h2>
+                    <div class="price_and_time">
+                        <span class="price">499.000đ</span>
+                        <span class="time">/tháng</span>
+                    </div>
+                </div>
+
+                <div class="card_body">
+                    <div class="privilege">
+                        <p><i class="fa-solid fa-circle-check"></i> Truy cập 50+ khóa học</p>
+                        <p><i class="fa-solid fa-circle-check"></i> Học trên mọi thiết bị</p>
+                        <p><i class="fa-solid fa-circle-check"></i> Hỗ trợ cộng đồng</p>
+                        <p><i class="fa-regular fa-circle-xmark"></i> Chứng chỉ</p>
+                        <p><i class="fa-regular fa-circle-xmark"></i> Hỗ trợ 1-1</p>
+                    </div>
+                </div>
+
+                <div class="card_footer">
+                    <button>Chọn gói</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
