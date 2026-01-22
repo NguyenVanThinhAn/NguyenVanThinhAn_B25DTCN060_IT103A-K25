@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Header</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f9fafb;
+        }
+
+        header {
+            background-color: #ffffff;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-main {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .text-red {
+            color: #b91c1c;
+        }
+
+        .text-dark {
+            color: #374151;
+        }
+
+        .text-blue {
+            color: #1e3a8a;
+        }
+
+        .logo-icon {
+            color: #2563eb;
+            font-size: 12px;
+            margin-left: 2px;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-size: 10px;
+            color: #6b7280;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+
+        .nav-item.active {
+            background-color: #f8fafc;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 0 1px #e5e7eb;
+        }
+
+        .user-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .banner {
+            background-color: #5b5bf1;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-main">
+                <span class="text-red">R</span><span class="text-dark">IKKEI</span><span class="text-blue">Edu</span>
+                <i class="fa-solid fa-satellite logo-icon"></i>
+            </div>
+            <div class="tagline">where dreams come true</div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-item">Trang chủ</a>
+            <a href="#" class="nav-item">Khóa học</a>
+            <a href="#" class="nav-item active">Khóa học của tôi</a>
+            <a href="#" class="nav-item">Liên hệ</a>
+        </nav>
+
+        <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Avatar" class="avatar">
+            <span class="user-name">Nguyễn Văn A</span>
+        </div>
+    </header>
+
+    <div class="banner">
+        <h1>Khóa Học Của Tôi</h1>
+        <p>Tiếp tục hành trình học tập và phát triển kỹ năng của bạn</p>
+    </div>
+
+</body>
+</html>

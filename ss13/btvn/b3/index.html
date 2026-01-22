@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f9fafb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 500px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        .form-col {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #1f2937;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #9ca3af;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #1a73e8; /* Adjusted to match the specific blue in image */
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 8px;
+            background-color: #0d6efd;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 24px;
+        }
+
+        .footer a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Đăng ký</h1>
+            <p>Tạo tài khoản để bắt đầu học tập trên hệ thống e-learning</p>
+        </div>
+
+        <form>
+            <div class="form-row">
+                <div class="form-col">
+                    <label>Họ và tên đệm</label>
+                    <input type="text" placeholder="Nguyễn Văn">
+                </div>
+                <div class="form-col">
+                    <label>Tên đầy đủ</label>
+                    <input type="text" placeholder="An">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="text" placeholder="0912 345 678">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Nhập địa chỉ email">
+            </div>
+
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" placeholder="Nhập mật khẩu">
+            </div>
+
+            <div class="form-group">
+                <label>Nhập lại mật khẩu</label>
+                <input type="password" placeholder="Nhập lại mật khẩu">
+            </div>
+
+            <button type="button" class="btn-submit">Đăng ký</button>
+        </form>
+
+        <div class="footer">
+            Đã có tài khoản? <a href="#">Đăng nhập</a>
+        </div>
+    </div>
+
+</body>
+</html>

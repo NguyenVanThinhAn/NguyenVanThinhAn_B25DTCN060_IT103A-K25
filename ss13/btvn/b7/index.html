@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Stats</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+
+        /* --- Header Section (Giữ nguyên) --- */
+        header {
+            background-color: #ffffff;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo-main {
+            font-size: 26px;
+            font-weight: 800;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .text-red { color: #b91c1c; }
+        .text-dark { color: #374151; }
+        .text-blue { color: #1e3a8a; }
+        
+        .logo-icon {
+            color: #2563eb;
+            font-size: 12px;
+            margin-left: 2px;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 4px;
+            letter-spacing: 0.2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-item {
+            text-decoration: none;
+            color: #1f2937;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+
+        .nav-item.active {
+            background-color: #f8fafc;
+            color: #5b5bf1;
+            font-weight: 600;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 0 1px #e5e7eb;
+        }
+
+        .user-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        /* --- Banner Section --- */
+        .banner {
+            background-color: #5b5bf1;
+            height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .banner h1 {
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+
+        /* --- Filter Tabs Section --- */
+        .filter-section {
+            padding: 30px 50px 10px 50px; /* Giảm padding bottom */
+            background-color: #ffffff;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 16px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .tab-btn.active {
+            background-color: #5b5bf1;
+            color: #ffffff;
+            border-color: #5b5bf1;
+            box-shadow: 0 2px 4px rgba(91, 91, 241, 0.3);
+        }
+
+        .tab-btn.inactive {
+            background-color: #ffffff;
+            color: #374151;
+            border-color: #e5e7eb;
+        }
+
+        .tab-btn.inactive:hover {
+            background-color: #f9fafb;
+            border-color: #d1d5db;
+        }
+
+        /* --- Stats Section (Mới thêm vào) --- */
+        .stats-section {
+            padding: 40px 50px 60px;
+        }
+
+        .stats-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .stat-card {
+            background-color: #ffffff;
+            border: 1px solid #f3f4f6;
+            border-radius: 12px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+        }
+
+        .stat-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #5b5bf1; /* Màu xanh tím giống theme */
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        /* Icon Colors specific to the design */
+        .icon-books { color: #0ea5e9; } /* Blue/Cyan */
+        .icon-target { color: #ec4899; } /* Pink */
+        .icon-check { color: #22c55e; } /* Green */
+        .icon-clock { color: #f43f5e; } /* Red/Pink */
+        .icon-cert { color: #f59e0b; } /* Orange */
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo-main">
+                <span class="text-red">R</span><span class="text-dark">IKKEI</span><span class="text-blue">Edu</span>
+                <i class="fa-solid fa-satellite logo-icon"></i>
+            </div>
+            <div class="tagline">where dreams come true</div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-item">Trang chủ</a>
+            <a href="#" class="nav-item">Khóa học</a>
+            <a href="#" class="nav-item active">Khóa học của tôi</a>
+            <a href="#" class="nav-item">Liên hệ</a>
+        </nav>
+
+        <div class="user-profile">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Avatar" class="avatar">
+            <span class="user-name">Nguyễn Văn A</span>
+        </div>
+    </header>
+
+    <div class="banner">
+        <h1>Khóa Học Của Tôi</h1>
+        <p>Tiếp tục hành trình học tập và phát triển kỹ năng của bạn</p>
+    </div>
+
+    <div class="filter-section">
+        <div class="filter-tabs">
+            <button class="tab-btn active">Tất cả khóa học (4)</button>
+            <button class="tab-btn inactive">Đang học (2)</button>
+            <button class="tab-btn inactive">Hoàn thành (1)</button>
+            <button class="tab-btn inactive">Đã lưu (1)</button>
+        </div>
+    </div>
+
+    <div class="stats-section">
+        <h2 class="stats-title">Thống Kê Học Tập</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fa-solid fa-book-open stat-icon icon-books"></i>
+                <div class="stat-number">4</div>
+                <div class="stat-label">Tổng khóa học</div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-bullseye stat-icon icon-target"></i>
+                <div class="stat-number">2</div>
+                <div class="stat-label">Đang học</div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-square-check stat-icon icon-check"></i>
+                <div class="stat-number">1</div>
+                <div class="stat-label">Hoàn thành</div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-clock stat-icon icon-clock"></i>
+                <div class="stat-number">43</div>
+                <div class="stat-label">Giờ học</div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-scroll stat-icon icon-cert"></i>
+                <div class="stat-number">1</div>
+                <div class="stat-label">Chứng chỉ</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

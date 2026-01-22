@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #f9fafb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 500px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 15px;
+            color: #4b5563;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #1f2937;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #9ca3af;
+        }
+
+        .options-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #374151;
+        }
+
+        .remember-me input {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #0d6efd;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 24px;
+        }
+
+        .footer a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Đăng nhập</h1>
+            <p>Đăng nhập để sử dụng hệ thống e-learning</p>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Nhập địa chỉ email">
+            </div>
+
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" placeholder="Nhập mật khẩu">
+            </div>
+
+            <div class="options-row">
+                <label class="remember-me">
+                    <input type="checkbox">
+                    Ghi nhớ đăng nhập
+                </label>
+                <a href="#" class="forgot-password">Quên mật khẩu?</a>
+            </div>
+
+            <button type="button" class="btn-submit">Đăng nhập</button>
+        </form>
+
+        <div class="footer">
+            Chưa có tài khoản? <a href="#">Đăng ký ngay</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course List</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .course-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-image {
+            position: relative;
+            height: 180px;
+            width: 100%;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-studying { background-color: #3b82f6; }
+        .badge-completed { background-color: #10b981; }
+        .badge-saved { background-color: #f59e0b; }
+
+        .overlay-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 48px;
+            height: 48px;
+            background-color: rgba(16, 185, 129, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .tag-design { background-color: #eff6ff; color: #3b82f6; }
+        .tag-marketing { background-color: #f5f3ff; color: #8b5cf6; }
+        .tag-data { background-color: #f0f9ff; color: #0ea5e9; }
+
+        .course-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .instructor {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        /* Progress Bar Styles */
+        .progress-section {
+            background-color: #f9fafb;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        .progress-percent-blue { color: #5b5bf1; }
+        .progress-percent-green { color: #10b981; }
+
+        .progress-track {
+            width: 100%;
+            height: 6px;
+            background-color: #e5e7eb;
+            border-radius: 99px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            border-radius: 99px;
+        }
+
+        .fill-blue { background-color: #5b5bf1; width: 20%; }
+        .fill-green { background-color: #10b981; width: 100%; }
+
+        .progress-footer {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        /* Meta Info (Card 3) */
+        .meta-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-item i { color: #6b7280; }
+        .meta-item .fa-star { color: #f59e0b; }
+
+        .price-section {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .current-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #5b5bf1;
+        }
+
+        .original-price {
+            font-size: 14px;
+            color: #9ca3af;
+            text-decoration: line-through;
+        }
+
+        /* Footer Actions */
+        .card-footer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: #5b5bf1;
+            color: #ffffff;
+        }
+
+        .btn-outline {
+            background-color: #ffffff;
+            border-color: #5b5bf1;
+            color: #5b5bf1;
+        }
+
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            background-color: #ffffff;
+            color: #6b7280;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .icon-star { color: #f59e0b; }
+        .icon-delete { color: #9ca3af; }
+        .icon-cert { color: #f59e0b; }
+        .icon-chart { color: #10b981; }
+
+    </style>
+</head>
+<body>
+
+    <div class="course-container">
+        <div class="course-grid">
+            
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="UI Design">
+                    <span class="badge badge-studying">Đang học</span>
+                </div>
+                <div class="card-body">
+                    <span class="category-tag tag-design">Thiết kế</span>
+                    <h3 class="course-title">UI/UX Design Chuyên Nghiệp</h3>
+                    <p class="instructor">Giảng viên: Trần Thị B</p>
+
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span>Tiến độ học tập</span>
+                            <span class="progress-percent-blue">20%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill fill-blue"></div>
+                        </div>
+                        <div class="progress-footer">
+                            <span>7/35 bài học</span>
+                            <span>28 giờ còn lại</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Tiếp tục học</button>
+                        <button class="icon-btn"><i class="fa-solid fa-chart-column icon-chart"></i></button>
+                        <button class="icon-btn"><i class="fa-solid fa-scroll icon-cert"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Marketing">
+                    <span class="badge badge-completed">Hoàn thành</span>
+                    <div class="overlay-icon"><i class="fa-solid fa-check"></i></div>
+                </div>
+                <div class="card-body">
+                    <span class="category-tag tag-marketing">Marketing</span>
+                    <h3 class="course-title">Digital Marketing Toàn Diện</h3>
+                    <p class="instructor">Giảng viên: Lê Văn C</p>
+
+                    <div class="progress-section">
+                        <div class="progress-header">
+                            <span>Hoàn thành</span>
+                            <span class="progress-percent-green">100%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill fill-green"></div>
+                        </div>
+                        <div class="progress-footer">
+                            <span>30/30 bài học</span>
+                            <span>Hoàn thành: 15/12/2025</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-outline">Xem lại</button>
+                        <button class="icon-btn"><i class="fa-solid fa-file-arrow-down" style="color: #ef4444;"></i></button>
+                        <button class="icon-btn"><i class="fa-solid fa-star icon-star"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Coding">
+                    <span class="badge badge-saved">Đã lưu</span>
+                </div>
+                <div class="card-body">
+                    <span class="category-tag tag-data">AI & Data</span>
+                    <h3 class="course-title">Machine Learning Cơ Bản</h3>
+                    <p class="instructor">Giảng viên: Phạm Thị D</p>
+
+                    <div class="meta-info">
+                        <div class="meta-item"><i class="fa-regular fa-clock"></i> 50 giờ</div>
+                        <div class="meta-item"><i class="fa-solid fa-chart-simple"></i> Trung cấp</div>
+                        <div class="meta-item"><i class="fa-solid fa-star"></i> 4.9 (756)</div>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="current-price">2,799,000đ</span>
+                        <span class="original-price">3,999,000đ</span>
+                    </div>
+
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Đăng ký ngay</button>
+                        <button class="icon-btn"><i class="fa-solid fa-trash-can icon-delete"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
