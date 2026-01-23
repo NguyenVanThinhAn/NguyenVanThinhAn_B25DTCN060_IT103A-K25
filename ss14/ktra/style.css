@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Golobal */
+
+.gold {
+    color: #FFAD33;
+}
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* main */
+
+main {
+    padding: 30px;
+}
+
+main .product_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .product_list .product {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+}
+
+main .product_list .product .img {
+    height: 180px;
+}
+
+main .product_list .product:nth-child(1) .img {
+    background-image: url(img/img1.jpg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+main .product_list .product:nth-child(2) .img {
+    background-image: url(img/img2.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+main .product_list .product:nth-child(3) .img {
+    background-image: url(img/img3.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+main .product_list .product:nth-child(4) .img {
+    background-image: url(img/img4.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+main .product_list .product:nth-child(5) .img {
+    background-image: url(img/img5.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+main .product_list .product:nth-child(6) .img {
+    background-image: url(img/img6.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+main .product_list .product:nth-child(7) .img {
+    background-image: url(img/img7.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+main .product_list .product:nth-child(8) .img {
+    background-image: url(img/img8.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
