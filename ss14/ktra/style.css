@@ -41,6 +41,11 @@ main .product_list .product .img {
     height: 180px;
 }
 
+main .product_list .product .price_and_rate .price {
+    color: red;
+}
+
+
 main .product_list .product:nth-child(1) .img {
     background-image: url(img/img1.jpg);
     background-repeat: no-repeat;
