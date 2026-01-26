@@ -1,0 +1,441 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* header */
+
+header {
+    background-color: #0B2B2E;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 20px;
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header .logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header .logo .icon {
+    background-color: #3AD473;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    transform: rotate(45deg);
+}
+
+header .logo .name {
+    display: flex;
+    flex-direction: column;
+}
+
+header .logo .text_block span {
+    color: white;
+}
+
+header .logo .text_block .name {
+    font-size: 25px;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+
+}
+
+header .love_shop {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+header .love_shop i {
+    color: white;
+    font-size: 19px;
+}
+
+.fa-bars {
+        display: none;
+}
+
+/* main */
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+}
+
+/* main intro */
+
+main .intro {
+    background-color: #133E40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 15%;
+    gap: 50px;
+}
+
+main .intro .content,
+main .intro .content .text_block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .intro .content .text_block {
+    color: white;
+}
+
+main .intro .content .text_block p {
+    color: #D1D5DB;
+}
+
+main .intro .content .buttons .into  {
+    background-color: #133E40;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+main .intro .content .buttons .shop {
+    background-color: #4BDE7F;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 6px 2px rgba(75, 222, 127,0.3);
+}
+
+/* main showcase */
+
+main .showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .showcase .content_list {
+    display: flex;
+    padding: 10%;
+    gap: 20px;
+}
+
+main .showcase .content_list .card {
+    background-color: #F9FAFC;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+main .showcase .content_list .card .icon {
+    font-size: 35px;
+    padding: 10px;
+}
+
+/* main us_product*/
+
+
+main .us_product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+main .us_product .product_list {
+    display: flex;
+    padding: 10%;
+    gap: 20px;
+    width: 100%;
+}
+
+main .us_product .product_list .product_card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 33%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+main .us_product .product_list .product_card .img {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+    /* main .us_product .product_list .product_card .img */
+
+    main .us_product .product_list .product_card:nth-child(1) .img {
+        background-image: url("https://images.unsplash.com/photo-1542291026-7eec264c27ff");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    main .us_product .product_list .product_card:nth-child(2) .img {
+        background-image: url("https://images.unsplash.com/photo-1608231387042-66d1773070a5");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    main .us_product .product_list .product_card:nth-child(3) .img {
+        background-image: url("https://vn-live-01.slatic.net/p/8fc83a75d96b4f5f1df22d2b2609d1c2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* product_card text_block */
+
+    main .us_product .product_list .product_card .text_block {
+        padding: 20px;
+    }
+
+/* main reason */
+
+main .reason {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 10%;
+    width: 100%;
+}
+
+    /* reason img */
+
+    main .reason .img {
+        width: 60%;
+        position: relative;
+    }
+
+    main .reason img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* reason img tag */
+
+    main .reason .img .tag {
+        position: absolute;
+        background-color: #FACC14;
+        border-radius: 10px;
+        padding: 5%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        right: -15px;
+        top: 10px;
+    }
+
+/* main athletes */
+
+main .athletes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .athletes .say_list {
+    display: flex;
+    padding: 10%;
+    gap: 20px;
+    width: 100%;
+}
+
+    /* say_list say_block */
+
+main .athletes .say_list .say_block {
+    background-color: #0B2B2E;
+    color: white;
+    padding: 25px 35px;
+    border-radius: 20px;
+}
+
+/* main regisster */
+
+main .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #0E3537;
+    width: 90%;
+    padding: 5% 0;
+    border-radius: 20px;
+}
+
+    /* register text */
+    .register h3 {
+        font-size: 25px;
+    }
+
+    /* register form */
+
+    .register form {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .register form input {
+        border-radius: 10px;
+        border: none;
+        width: 30%;
+        padding: 10px;
+    }
+
+    .register form button {
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #4BDE7F;
+        box-shadow: 0 0 6px 2px rgba(75, 222, 127,0.3);
+    }
+
+/* footer */
+
+footer {
+    background-color: #021617;
+    color: #9CA3AF;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+/* Media */
+
+@media (max-width:1024px) {
+    /* intro */
+    main .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main .intro img {
+        order: -1;
+    }
+
+    /* main content list */
+
+    main .showcase .content_list {
+        flex-wrap: wrap;
+    }
+
+    main .showcase .content_list .card {
+        width: calc(50% - 20px);
+    }
+
+    /* product */
+
+    main .us_product .product_list {
+        flex-wrap: wrap;
+    }
+
+    main .us_product .product_list .product_card {
+        width: calc(50% - 20px);
+    }
+
+    /* reason */
+
+    main .reason {
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 30px;
+    }
+
+    main .reason .img {
+        width: 100%;
+    }
+
+    /* athletes says */
+
+    main .athletes .say_list {
+        flex-wrap: wrap;
+    }
+    
+    main .athletes .say_list .say_block {
+        width: calc(50% - 20px);
+    }
+
+    /* register */
+
+    .register form {
+        flex-direction: column;
+    }
+
+    .register form button {
+        width: 80%;
+    }
+    
+}
+
+@media (max-width:768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    /* bar */
+
+    .fa-bars {
+        display: inline;
+    }
+}
+
+/* Global */
+
+.bold {
+    font-weight: bold;
+}
+
+.high_light {
+    color: #4BDE7F;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.fa-bars {
+    color: white;
+    font-size: 20px;
+}
