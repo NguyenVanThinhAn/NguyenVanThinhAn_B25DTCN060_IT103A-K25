@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+/* header */
+
+header p {
+    font-size: 30px;
+}
+
+/* main */
+
+main .card_list {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* card */
+
+main .card_list .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 27%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main .card_list .card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* img */
+
+main .card_list .card > img {
+    width: 100%;
+}
+
+/* type_time */
+
+main .card_list .card .type_time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .card_list .card .type_time .type {
+    display: flex;
+    align-items: center;
+    gap: 10px;            
+}
+
+main .card_list .card .type_time .time {
+    color: #696984;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .card_list .card .type_time .type .type {
+    color: #696984;
+}
+
+/* title */
+
+main .card_list .card .text_block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .card_list .card .text_block h2 {
+    font-size: 20px;
+}
+
+main .card_list .card .text_block p {
+    color: #696984;
+}
+
+/* avatar */
+
+main .card_list .card .user_price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .card_list .card .user_price .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .card_list .card .price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .card_list .card .old_price {
+    color: #696984;
+    text-decoration: line-through;
+}
+
+main .card_list .card .price {
+    color: #49BBBD;
+    font-weight: bold;
+}
