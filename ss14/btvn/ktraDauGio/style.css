@@ -114,6 +114,7 @@ main .card_list .card .price {
 main .card_list .card .old_price {
     color: #696984;
     text-decoration: line-through;
+    font-style: italic;
 }
 
 main .card_list .card .price {
