@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Đăng kí tài khoản</h1>
+      <p class="desc desc-grey">Đăng ký tài khoản để sử dụng dịch vụ</p>
+    </header>
+    <main>
+      <form action="youtube.com" method="post" id="form-register">
+        <div class="form-input-group">
+          <div class="form-input">
+            <div class="input-main">
+              <label for="input-full-name">Họ và tên đệm</label>
+              <input type="text" id="input-full-name" />
+            </div>
+            <p class="validate hide">Họ và tên đệm không được để trống</p>
+          </div>
+
+          <div class="form-input">
+            <div class="input-main">
+              <label for="input-name">Tên</label>
+              <input type="text" id="input-name" />
+            </div>
+            <p class="validate hide">Tên không được để trống</p>
+          </div>
+        </div>
+
+        <div class="form-input add-position-relative">
+          <div class="input-main">
+            <label for="input-email">Email</label>
+            <input type="text" id="input-email" placeholder="you@company.com" />
+          </div>
+          <p class="validate hide">Email không được để trống</p>
+          <p class="validate hide">Email phải đúng định dạng</p>
+          <p class="validate hide">Email đã tồn tại</p>
+        </div>
+
+        <div class="form-input add-position-relative">
+          <div class="input-main">
+            <label for="input-password">Mật khẩu</label>
+            <input type="password" id="input-password" maxlength="100" />
+          </div>
+          <p class="validate hide">Mật khẩu không được để trống</p>
+          <p class="validate hide">Mật khẩu tối thiểu 8 ký tự</p>
+          <button type="button" class="btn-password-visible">
+            <img
+              src="../asset/icons/eye-icon/password_hide.svg"
+              class="password-hide-icon"
+              alt=""
+            />
+            <img
+              src="../asset/icons/eye-icon/pasword_show.svg"
+              class="password-show-icon hide"
+              alt=""
+            />
+          </button>
+        </div>
+
+        <div class="form-input add-position-relative">
+          <div class="input-main">
+            <label for="input-password-confirm">Xác nhận mật khẩu</label>
+            <input
+              type="password"
+              id="input-password-confirm"
+              maxlength="100"
+            />
+          </div>
+          <p class="validate hide">Mật khẩu không trùng khớp</p>
+          <button type="button" class="btn-password-visible">
+            <img
+              src="../asset/icons/eye-icon/password_hide.svg"
+              class="password-hide-icon"
+              alt=""
+            />
+            <img
+              src="../asset/icons/eye-icon/pasword_show.svg"
+              class="password-show-icon hide"
+              alt=""
+            />
+          </button>
+        </div>
+
+        <div class="form-checkbox">
+          <div class="form-checkbox-main">
+            <input type="checkbox" id="checkbox-clause" />
+            <span
+              >Bạn có đồng ý với
+              <span class="hight-light-blue"
+                >chính sách và điều khoản</span
+              ></span
+            >
+          </div>
+          <p class="validate hide">Bạn chưa đồng ý điều khoản!</p>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" id="btn-submit">Đăng kí</button>
+        </div>
+
+        <div class="redirect-login">
+          <span
+            >Bạn đã có tài khoản?
+            <button
+              type="button"
+              class="hight-light-blue"
+              id="btn-login-redirect"
+            >
+              Đăng nhập
+            </button></span
+          >
+        </div>
+      </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/register.js"></script>
+  </body>
+</html>

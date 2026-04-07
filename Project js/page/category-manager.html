@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh mục - Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/category-manager.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <div class="modal hide" id="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-container">
+        <div class="modal-header">
+          <h2>Thêm mới danh mục</h2>
+          <button class="btn-close">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#6B7280"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Mã danh mục <span class="required">*</span></label>
+            <input type="text" class="input-control" placeholder="" />
+            <p class="validate hide">Mã danh mục không được để trống</p>
+            <p class="validate hide">Mã danh mục bị trùng</p>
+          </div>
+
+          <div class="form-group">
+            <label>Tên danh mục <span class="required">*</span></label>
+            <input type="text" class="input-control" placeholder="" />
+            <p class="validate hide">Tên danh mục không được để trống</p>
+          </div>
+
+          <div class="form-group">
+            <label>Trạng thái</label>
+            <div class="radio-group-container">
+              <label class="radio-item">
+                <input
+                  type="radio"
+                  name="status_add"
+                  class="status-radio"
+                  checked
+                />
+                Đang hoạt động
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="status_add" class="status-radio" />
+                Ngừng hoạt động
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-cancel">Hủy</button>
+          <button class="btn-save">Thêm</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-confirm hide" id="confirm-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-container confirm-modal-container">
+        <div class="warning-icon-wrapper">
+          <div class="warning-icon-bg">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#C94A38"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+        </div>
+
+        <h2 class="confirm-title">Xác nhận</h2>
+        <p class="confirm-message"></p>
+
+        <div class="confirm-divider">.</div>
+
+        <div class="modal-footer confirm-footer">
+          <button class="btn-cancel">Hủy</button>
+          <button class="btn-confirm">Xác nhận</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="admin-layout">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <img
+            src="../asset/icons/category-asset/logo.svg"
+            alt="logo"
+            class="brand-icon"
+          />
+          <span class="brand-name">Ecommerce</span>
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" class="menu-item">
+            <img src="../asset/icons/category-asset/Home.svg" alt="Thống kê" />
+            Thống kê
+          </a>
+          <a href="#" class="menu-item active">
+            <img src="../asset/icons/category-asset/Cash.svg" alt="Danh mục" />
+            Danh mục
+          </a>
+          <a href="#" class="menu-item" id="btn-product-page">
+            <img
+              src="../asset/icons/category-asset/ProductFolder.svg"
+              alt="Sản phẩm"
+            />
+            Sản phẩm
+          </a>
+        </nav>
+      </aside>
+
+      <div class="main-wrapper">
+        <header class="top-header">
+          <button class="btn-icon">
+            <img src="../asset/icons/category-asset/Bell.svg" alt="Thông báo" />
+          </button>
+          <div class="user-profile" id="btn-user-profile">
+            <img
+              src="../asset/images/category-manager/avatar.png"
+              alt="User Avatar"
+              class="user-avatar"
+              id="userAvatar"
+            />
+
+            <div class="logout-menu hide" id="logoutMenu">
+              <div class="logout-item" id="btnLogout">
+                <img src="../asset/icons/log-out.svg" alt="Đăng xuất" />
+                Đăng xuất
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="page-content">
+          <div class="page-header">
+            <h1 class="page-title">Danh mục</h1>
+            <button class="btn-primary" id="btn-add-modal">
+              Thêm mới danh mục
+            </button>
+          </div>
+
+          <div class="action-bar">
+            <select class="select-sort" id="btn-sort">
+              <option value="none">Lọc theo danh mục</option>
+              <option value="name">Sắp xếp theo tên</option>
+              <option value="date">Sắp xếp theo ngày tạo</option>
+            </select>
+            <select class="select-filter" id="btn-filter">
+              <option value="all">Tất cả</option>
+              <option value="active">Đang hoạt động</option>
+              <option value="inactive">Ngừng hoạt động</option>
+            </select>
+            <div class="search-box">
+              <input
+                id="input-search"
+                type="text"
+                placeholder="Tìm kiếm danh mục theo tên hoặc mã"
+                class="input-search"
+              />
+              <button class="btn-search">
+                <img
+                  src="../asset/icons/category-asset/Search.svg"
+                  alt="Search"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table" id="products-data-table">
+              <thead>
+                <tr>
+                  <th>
+                    Mã danh mục
+                    <img
+                      src="../asset/icons/category-asset/arrow/arrow-down.svg"
+                      alt="sort"
+                      class="sort-icon"
+                    />
+                  </th>
+                  <th>
+                    Tên danh mục
+                    <img
+                      src="../asset/icons/category-asset/arrow/arrow-down.svg"
+                      alt="sort"
+                      class="sort-icon"
+                    />
+                  </th>
+                  <th>Trạng thái</th>
+                  <th>Chức năng</th>
+                </tr>
+              </thead>
+              <tbody id="catagories-table">
+                <tr class="category-element">
+                  <td class="category-id">DM001</td>
+                  <td class="font-medium">Quần áo</td>
+                  <td class="status-display">
+                    <span class="status-badge status-active">
+                      <span class="dot"></span> Đang hoạt động
+                    </span>
+                  </td>
+                  <td class="actions">
+                    <button class="btn-action btn-action-delete">
+                      <img
+                        src="../asset/icons/category-asset/Trash.svg"
+                        alt="Xóa"
+                      />
+                    </button>
+                    <button class="btn-action btn-action-edit">
+                      <img
+                        src="../asset/icons/category-asset/Edit.svg"
+                        alt="Sửa"
+                      />
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagination" id="btn-page-table">
+            <button class="page-btn-prev">
+              <img
+                src="../asset/icons/category-asset/arrow/arrow left.svg"
+                alt="Prev"
+              />
+            </button>
+            <div class="page-start"></div>
+            <span class="page-dots">...</span>
+            <div class="page-mid"></div>
+            <span class="page-dots">...</span>
+            <div class="page-end"></div>
+            <button class="page-btn-next">
+              <img
+                src="../asset/icons/category-asset/arrow/arrow right.svg"
+                alt="Next"
+              />
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="notification-table"></div>
+    <script type="module" src="../js/category-manager.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Đăng nhập</h1>
+      <p class="desc desc-grey">
+        Đăng nhập tài khoản để sử dụng hệ thống quản lý.
+      </p>
+    </header>
+    <main>
+      <form action="youtube.com" method="post" id="form-login">
+        <div class="form-input">
+          <div class="input-main">
+            <label for="input-email">Email</label>
+            <input type="text" id="input-email" placeholder="you@company.com" />
+          </div>
+          <p class="validate hide">Email phải đúng định dạng</p>
+          <p class="validate hide">Sai email hoặc mật khẩu</p>
+        </div>
+
+        <div class="form-input add-position-relative">
+          <div class="input-main">
+            <label for="input-password">Mật khẩu</label>
+            <input type="password" id="input-password" maxlength="100" />
+          </div>
+          <p class="validate hide">Sai email hoặc mật khẩu</p>
+          <p class="validate hide">Mật khẩu không được để trống</p>
+          <button type="button" class="btn-password-visible">
+            <img
+              src="../asset/icons/eye-icon/password_hide.svg"
+              class="password-hide-icon"
+              alt=""
+            />
+            <img
+              src="../asset/icons/eye-icon/pasword_show.svg"
+              class="password-show-icon hide"
+              alt=""
+            />
+          </button>
+        </div>
+
+        <div class="form-input-group input-function">
+          <div class="login-remember">
+            <input type="checkbox" id="checkbox-remember" />
+            <span>Nhớ tài khoản</span>
+          </div>
+
+          <div class="forgot-password">
+            <button id="btn-forgot-password" class="hight-light-deep-blue">
+              Quên mật khẩu
+            </button>
+          </div>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" id="btn-submit">Đăng nhập</button>
+        </div>
+
+        <div class="redirect-register">
+          <span class="desc-grey"
+            >Bạn chưa có tài khoản?
+            <button
+              type="button"
+              class="hight-light-deep-blue"
+              id="btn-register-redirect"
+            >
+              Đăng ký
+            </button></span
+          >
+        </div>
+      </form>
+      <div class="notification-table"></div>
+      <script type="module" src="../js/login.js"></script>
+    </main>
+  </body>
+</html>

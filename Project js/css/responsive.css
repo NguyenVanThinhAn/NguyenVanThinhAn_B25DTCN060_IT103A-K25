@@ -1,0 +1,31 @@
+/* register */
+@media (max-width: 768px) {
+    .form-input-group {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* login */
+
+@media (max-width: 768px) {
+    .forgot-password {
+        display: none;
+    }
+
+    .form-checkbox {
+        display: block;
+    }
+
+    header {
+        align-items: center;
+    }
+
+    label {
+        color: #344054;
+    }
+
+    .redirect-register {
+        display: none;
+    }
+}

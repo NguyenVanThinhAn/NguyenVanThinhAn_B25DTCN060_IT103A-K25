@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif;
+}
+/* body */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    width: 480px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    height: 44px;
+}
+
+header .desc {
+    height: 30px;
+    font-size: 20px;
+}
+
+/* main */
+
+main {
+    width: 480px;
+}
+
+/* main form */
+/* main form text-input */
+#form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-input-group {
+    display: flex;
+    width: 100%;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.form-input {
+    width: 100%;
+}
+
+input[type="text"] {
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+/* label */
+label {
+    font-weight: bold;
+}
+
+/* main form checkbox-input */
+.form-checkbox {
+    display: flex;
+    justify-content: left;
+    gap: 12px;
+    display: none;
+}
+
+#checkbox-remember {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* main form login-remember */
+.login-remember {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.login-remember span{
+    font-size: 14px;
+}
+
+/* main form btn-forgot-password */
+
+#btn-forgot-password {
+    background: none;
+    border: none;
+    font-size: 14px;
+}
+
+/* main form submit-input */
+.form-submit {
+    width: 100%;
+}
+
+#btn-submit {
+    background-color: #2563EB;
+    width: 100%;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.redirect-register {
+    display: flex;
+    justify-content: center;
+}
+
+#btn-register-redirect {
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+/* password button */
+.btn-password-visible {
+    position: absolute;
+    top: 36px;
+    right: 10px;
+    background: none;
+    border: none;
+}
+
+.btn-password-visible img {
+    width: 25px;
+    height: 25px;
+}
+
+#input-password,
+#input-password-confirm {
+    padding-right: 50px;
+}
